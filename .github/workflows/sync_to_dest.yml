@@ -21,7 +21,7 @@ jobs:
 
       # 第 2 步：将 'output' 目录推送到 dest-repo
       - name: Push 'output' directory to dest-repo
-        uses: cpina/github-action-push-to-another-repo@main
+        uses: cpina/github-action-push-to-another-repository@main 
         env:
           API_TOKEN_GITHUB: ${{ secrets.SYNC_TO_DEST_REPO }} # 使用我们刚刚创建的 Secret
         with:
