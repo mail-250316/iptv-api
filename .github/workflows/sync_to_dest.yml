@@ -1,6 +1,8 @@
 name: Sync 'output' directory to dest-repo
 
 on:
+  schedule:
+    - cron: '0 12 */2 * *'
   push:
     branches:
       - main # 只有当 main 分支有更新时才触发
