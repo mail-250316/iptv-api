@@ -7,7 +7,7 @@ on:
     branches:
       - main # 只有当 main 分支有更新时才触发
     paths:
-      - 'output/user*' # 只有当 output 目录下的文件发生变化时才触发，提高效率
+      - 'output/**' # 只有当 output 目录下的文件发生变化时才触发，提高效率
 
   workflow_dispatch: # 允许手动触发此工作流
 
