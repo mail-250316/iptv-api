@@ -23,11 +23,12 @@ jobs:
       - name: Push 'output' directory to dest-repo
         uses: cpina/github-action-push-to-another-repo@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.ACTIONS_PAT }} # 使用我们刚刚创建的 Secret
+          API_TOKEN_GITHUB: ${{ secrets.SYNC_TO_DEST_REPO }} # 使用我们刚刚创建的 Secret
         with:
           source-directory: 'output' # 要同步的源目录
-          destination-github-username: '<your-github-username>' # 目标仓库的拥有者（你的用户名或组织名）
-          destination-repository-name: 'dest-repo' # 目标仓库的名称
+          destination-github-username: '<mail-250316>' # 目标仓库的拥有者（你的用户名或组织名）
+          destination-repository-name: 'myedgehtml' # 目标仓库的名称
+          destination-directory: 'iptv' # 指定目标仓库中的子目录
           user-email: 'actions@github.com' # 提交者邮箱
           user-name: 'GitHub Actions' # 提交者名称
           commit-message: 'Automated sync from source-repo' # 自定义 Git 提交信息
